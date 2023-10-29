@@ -1,0 +1,17 @@
+.a-link{
+    text-decoration: none;
+}
+
+.details-container{
+    height: 100vh;
+}
+
+.description{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:500px){
+    .details-container {
+            height: auto;
+        }
+}

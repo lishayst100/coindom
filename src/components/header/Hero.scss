@@ -1,0 +1,71 @@
+.hero{
+    height: 100vh;
+}
+
+
+.title{
+    font-size: 6.6rem;
+    line-height: 1.1;
+}
+
+
+
+.coin-img{
+    max-width: 100px;
+}
+
+.coin-container{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.floating-coin{
+    width: 71px;
+    margin: 0 40px;
+    animation: float infinite 2s ease-in-out;
+}
+
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.coins-container{
+    gap: 6.5rem;
+    padding-top: 80px;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(-15px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(-15px);
+    }
+}
+
+
+@media (max-width:500px){
+    .title {
+            font-size: 2.5rem;
+            line-height: 1.1;
+        }
+        .floating-coin {
+            display: none;
+        }
+                .coin-container {
+                    display: none;
+                }
+                                .coins-container {
+                                    gap:2.5rem;
+                                    padding-top: 80px;
+                                }
+                .hero{
+                    height: auto;
+                    padding-top: 100px;
+                }
+}

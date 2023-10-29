@@ -1,0 +1,43 @@
+.coins-img{
+    width: 50px;
+}
+
+.titles{
+font-size: 1.6rem;
+}
+
+.text-bigger-list{
+    font-size: 1.3rem;
+}
+.text-bigger{
+    font-size: 1.3rem;
+}
+
+.nav-btn{
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px 10px;
+
+}
+
+.search-input{
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    padding: 7px 15px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:500px) {
+    .titles {
+            font-size: 1rem;
+        }
+    .text-bigger-list{
+        font-size: 0.6rem;
+    }    
+}

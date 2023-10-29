@@ -1,0 +1,31 @@
+.choose-title{
+    font-size: 2rem;
+}
+.choose-detials{
+    font-size: 1.2rem;
+}
+
+.choose-box{
+        background-color: hsla(0, 0%, 100%, .05);
+        border: 1px solid hsla(0, 0%, 51%, .25);
+        border-radius: 2.4rem;
+        display: flex;
+        justify-content: center;
+        
+        gap: 4rem;
+        width: 100%;
+}
+
+.title-choose{
+    font-size: 55px;
+}
+
+.choose-icon{
+    font-size: 40px;
+    padding: 0 10px;
+    border-radius: 1rem;
+    width: 90px;
+    height: 70px;
+}
+
+
