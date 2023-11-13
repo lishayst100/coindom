@@ -4,6 +4,9 @@ import Coins from './Coins';
 import Title from './Title';
 
 const Hero = () => {
+
+  const arr= []
+ 
   return (
     <div
       className="hero d-flex justify-content-center align-items-center flex-column"

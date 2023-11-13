@@ -20,12 +20,25 @@ export const fetchArticles = () =>
   fetch(url)
     .then((res) => res.json())
     .then((json) => json as Coin[])
-    .then((coins) => {
-      coins.forEach((a) => {
-        a.isFavorite = false;
+    .then((fetchedCoins) => {
+      const localStorageData = JSON.parse(localStorage.getItem('favoriteCoins') || '[]') as Coin[];
+      const mergedCoins = fetchedCoins.map((fetchedCoin) => {
+        const localStorageCoin = localStorageData.find(
+          (lsCoin) => lsCoin.id === fetchedCoin.id
+        );
+        if (localStorageCoin) {
+          fetchedCoin.isFavorite = localStorageCoin.isFavorite;
+        } else {
+          
+          fetchedCoin.isFavorite = false;
+        }
+
+        return fetchedCoin;
       });
-      return coins;
+
+      return mergedCoins;
     });
+
 export const fetchCoins = createAsyncThunk<Coin[]>("coins/fetchCoins", fetchArticles);
 
 
@@ -40,7 +53,7 @@ const coinsSlice = createSlice({
        
       }
       const isFavoriteArray = state.coins.filter(c => c.isFavorite === true)
-      localStorage.setItem("coins", JSON.stringify(isFavoriteArray));
+      localStorage.setItem("favoriteCoins", JSON.stringify(isFavoriteArray));
     },
   },
   extraReducers: (builder) => {

@@ -8,7 +8,7 @@ const IconsList = () => {
     <div className="d-flex gap-5 container justify-content-center align-items-center flex-column flex-lg-row">
       <div className='d-flex flex-column gap-4'>
         {benefits.map((i) => (
-          <SingleIcon {...i} />
+          <SingleIcon {...i} key={i.title}/>
         ))}
       </div>
       <img
