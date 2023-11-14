@@ -20,34 +20,33 @@ const Coin = ({current_price,image,name,price_change_percentage_24h,id,isFavorit
       <img
         src={image}
         className="coin-img"
-        alt="..."
+        alt={name}
         onClick={() => {
           nav(`/coin/${id}`);
         }}
       />
-      <div>
+      <span className="flex gap-2">
         <span>{name} </span>
-        {Number(price_change) > 1 ? (
-          <span className="text-success">
-            {price_change}
-            <AiOutlineArrowUp className="green" />
-          </span>
-        ) : (
-          <span className="text-danger">
-            {price_change}
-            <AiOutlineArrowDown style={{ color: "red" }} className="red" />
-          </span>
-        )}
-      </div>
+        <span
+          onClick={() => {
+            dispatch(toggleFavorite(id));
+          }}
+        >
+          {isFavorite ? <AiFillHeart /> : <AiOutlineHeart />}
+        </span>
+      </span>
+
+      {Number(price_change) > 1 ? (
+        <span className="text-success">
+          {price_change}%
+        </span>
+      ) : (
+        <span className="text-danger">
+          {price_change}%
+        </span>
+      )}
 
       <span>${current_price.toFixed(2)}</span>
-      <span
-        onClick={() => {
-          dispatch(toggleFavorite(id));
-        }}
-      >
-        {isFavorite ? <AiFillHeart /> : <AiOutlineHeart />}
-      </span>
     </div>
   );
 }
