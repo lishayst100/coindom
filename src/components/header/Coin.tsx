@@ -1,4 +1,4 @@
-import { AiFillHeart, AiOutlineArrowDown, AiOutlineArrowUp, AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import {useNavigate} from 'react-router-dom'
 import { useAppDispatch } from "../../app/hooks";
 import { toggleFavorite } from "../../features/coinsSlice";

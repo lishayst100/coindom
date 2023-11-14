@@ -1,16 +1,10 @@
-import React, { useState } from 'react'
 import { useAppSelector } from '../../app/hooks'
 import Coin from '../header/Coin'
-import { Coin as CoinType } from '../../types/types'
 import NoCoins from './NoCoins'
 
 const FavoriteCoins = () => {
     const {coins} = useAppSelector((s)=> s.coins)
-    /* const favoriteCoins = coins.filter(c => c.isFavorite) */
-    const favoriteCoins = JSON.parse(
-      localStorage.getItem("favoriteCoins") || "[]"
-    ) as CoinType[];
-   
+    const favoriteCoins = coins.filter(c => c.isFavorite) 
     
     
   return (

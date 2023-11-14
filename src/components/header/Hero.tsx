@@ -5,7 +5,7 @@ import Title from './Title';
 
 const Hero = () => {
 
-  const arr= []
+  
  
   return (
     <div
