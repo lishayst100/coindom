@@ -6,20 +6,20 @@ const IconsList = () => {
     
   return (
     <div className="d-flex gap-5 container justify-content-center align-items-center flex-column flex-lg-row">
-      <div className='d-flex flex-column gap-4'>
+      <div className="d-flex flex-column gap-4">
         {benefits.map((i) => (
-          <SingleIcon {...i} key={i.title}/>
+          <SingleIcon {...i} key={i.title} />
         ))}
       </div>
       <img
-        src="https://coindom-crypto-search.vercel.app/static/media/choose-main.39852b7511b28d44406f.png"
+        src="https://res.cloudinary.com/dlkhrcm4x/image/upload/v1751886787/ethereum-6903894_640_f9deuo.png"
         alt=""
         height={340}
         width={240}
       />
-      <div className='d-flex flex-column gap-4'>
-        {benefits2.map((i,n) => (
-          <SingleIcon {...i} key={n}/>
+      <div className="d-flex flex-column gap-4">
+        {benefits2.map((i, n) => (
+          <SingleIcon {...i} key={n} />
         ))}
       </div>
     </div>
